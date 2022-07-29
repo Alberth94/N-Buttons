@@ -11,9 +11,9 @@ function createButtons () {
         document.body.appendChild(btn);
         btn.onclick = function () {
             if (randomNumber == i) {
-                alert ("Its me, you won!");
-            } else {
-                alert ("Try again!");
+                alert('Awesome! You won!');
+            }  else {
+                alert('You lost! Try again');
             }
         }
     }
