@@ -1,5 +1,9 @@
+function nrButtons() {
+    return document.getElementById("buttons").value;
+}
+
 function createButtons () {
-    let numberOfButtons = document.getElementById("buttons").value;
+    let numberOfButtons = nrButtons();
     let randomNumber = Math.floor((Math.random() * numberOfButtons) + 1);
     for (let i = 1; i <= numberOfButtons; ++i) {
         let btn = document.createElement('button');
@@ -7,9 +11,9 @@ function createButtons () {
         document.body.appendChild(btn);
         btn.onclick = function () {
             if (randomNumber == i) {
-                alert ('Awesome! You won!');
-            }  else {
-                alert ('You lost! Try again');
+                alert ("Its me, you won!");
+            } else {
+                alert ("Try again!");
             }
         }
     }
